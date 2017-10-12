@@ -1,4 +1,4 @@
-# UsmanMill Website Template
+# Venue Booking Project
 
 ### Feature
 * Comming Soon
@@ -33,11 +33,11 @@ Clone with HTTPS
 Use Git or checkout with SVN using the web URL.
 
 ```sh
-https://github.com/sarkaromar/usmanmill.git
+https://github.com/sarkaromar/venue.git
 ```
 
 ```sh
-cd usmanmill/
+cd venue/
 $ npm install
 ```
 

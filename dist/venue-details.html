@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Venue Booking | Venue list</title>
+
+    <link rel="stylesheet" href="css/style.min.css" >
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="vendors/css/bootstrap.min.css">
+    <!-- fontawesome -->
+    <script src="https://use.fontawesome.com/d36ff73a94.js"></script>
+    <!-- calender -->
+    <link rel="stylesheet" href="https://fullcalendar.io/js/fullcalendar-3.6.1/fullcalendar.min.css">
+  </head>
+  <body>
+<!-- header section -->
+    <header>
+      <div class="top-sec-sub">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="logo">
+                <a href="index.html">
+                  <!-- <img src="images/logo.png" alt="Logo"> -->
+                  <h1>Venue Booking</h1>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="top-nav">
+                <ul>
+                    <li><a href="login.html">Sign in</a></li>
+                    <li><a href="where.html">Contact us</a></li>
+                    <li><a href="about.html">About us</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </header>
+
+
+<!-- mainbody section -->
+    <section class="main-body">
+        <div class="venue-details">
+            <div class="container">
+                <!-- <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active">Library</li>
+                </ol> -->
+                <div class="row">
+                    <div class="col-lg-9">
+                        <h2>Venue Full Name</h2>
+                        <p> 62, 11th main, 3rd floor, Cool Joint Junction, Jayanagar 4th Block, Bangalore</p>
+                        <nav class="nav">
+                            <a class="nav-link active" href="#packages">Packages</a>
+                            <a class="nav-link" href="#facilities">Facilities</a>
+                            <a class="nav-link" href="#capacity">Capacity</a>
+                            <a class="nav-link" href="#food">Food</a>
+                            <a class="nav-link" href="#technology">Technology</a>
+                            <a class="nav-link" href="#about">About</a>
+                            <a class="nav-link" href="#suited">Suited</a>
+                            <a class="nav-link" href="#distance">Distance</a>
+                            <a class="nav-link" href="#policies">Policies</a>
+                            <a class="nav-link" href="#maps">Map</a>
+                        </nav>
+                        <div class="photos">
+                            <img src="images/v1.png" alt="">
+                        </div>
+
+                        <div class="card" id="highlights">
+                                <h4 class="card-header">Highlights</h4>
+                                <div class="card-body">
+                                    <ul>
+                                        <li><i class="fa fa-car"></i> CAR Parking Facilities</i></li>
+                                        <li><i class="fa fa-snowflake-o" aria-hidden="true"></i> Air Condition</i></li>
+                                        <li><i class="fa fa-university" aria-hidden="true"></i> Hall Facilities</i></li>
+                                        <li><i class="fa fa-cutlery" aria-hidden="true"></i> Food Facilities</i></li>
+                                        <li><i class="fa fa-glass" aria-hidden="true"></i> Bar/Drinks</i></li>
+                                        <li><i class="fa fa-users"></i> 500 Person</li>
+                                        <li><i class="fa fa-wheelchair" aria-hidden="true"></i> Disable access</i></li>
+                                        <li><i class="fa fa-wifi" aria-hidden="true"></i> Free WIFI</i></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                                                
+                        <div class="card" id="price">
+                                <h4 class="card-header">Hall Rental Price</h4>
+                                <div class="card-body">
+                                        Guest can bring outside food ( Veg & Non Veg allowed ) <br>
+                                        
+                                        For Half Day ( Lunch / Dinner ): <strong>tk90000</strong>
+                                </div>
+                            </div>
+                        
+                        <div class="card" id="packages">
+                            <h4 class="card-header">Packages</h4>
+                            <div class="card-body">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <td>Packages 1</td>
+                                            <td>Packages 2</td>
+                                            <td>Packages 3</td>
+                                            <td>Packages 4</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                            <tr>
+                                                <td>80</td>
+                                                <td>300</td>
+                                                <td>400</td>
+                                                <td>400</td>
+                                            </tr>
+                                            <tr>
+                                                <td>80</td>
+                                                <td>300</td>
+                                                <td>400</td>
+                                                <td>400</td>
+                                            </tr>
+                                            <tr>
+                                                <td>80</td>
+                                                <td>300</td>
+                                                <td>400</td>
+                                                <td>400</td>
+                                            </tr>
+                                            <tr>
+                                                <td><a class="btn btn-warning">Details</a></td>
+                                                <td><a class="btn btn-warning">Details</a></td>
+                                                <td><a class="btn btn-warning">Details</a></td>
+                                                <td><a class="btn btn-warning">Details</a></td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="card" id="facilities">
+                            <h4 class="card-header">Facilities</h4>
+                            <div class="card-body">
+                                <ul>
+                                    <li><i class="fa fa-car"></i> CAR Parking Facilities</i></li>
+                                    <li><i class="fa fa-snowflake-o" aria-hidden="true"></i> Air Condition</i></li>
+                                    <li><i class="fa fa-university" aria-hidden="true"></i> Hall Facilities</i></li>
+                                    <li><i class="fa fa-cutlery" aria-hidden="true"></i> Food Facilities</i></li>
+                                    <li><i class="fa fa-glass" aria-hidden="true"></i> Bar/Drinks</i></li>
+                                    <li><i class="fa fa-users"></i> 500 Person</li>
+                                    <li><i class="fa fa-wheelchair" aria-hidden="true"></i> Disable access</i></li>
+                                    <li><i class="fa fa-wifi" aria-hidden="true"></i> Free WIFI</i></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card" id="capacity">
+                            <h4 class="card-header">Capacity</h4>
+                            <div class="card-body">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <td>Minimum</td>
+                                            <td>Floating Capacity</td>
+                                            <td>Maximum Seating</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>80</td>
+                                            <td>300</td>
+                                            <td>400</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <div class="card" id="food">
+                            <h4 class="card-header">Food and Drinks</h4>
+                            <div class="card-body">
+                                <h4 class="card-title">Special title treatment</h4>
+                            </div>
+                        </div>
+                        
+                        <div class="card" id="seat">
+                            <h4 class="card-header">Seating Arrangements</h4>
+                            <div class="card-body">
+                                
+                                    <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <td>Shape Name</td>
+                                                    <td>Theater</td>
+                                                    <td>Class</td>
+                                                    <td>Cluster</td>
+                                                    <td>UShape</td>
+                                                    <td>Board</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                        <td>Capacity</td>
+                                                        <td>80</td>
+                                                        <td>300</td>
+                                                        <td>400</td>
+                                                        <td>400</td>
+                                                        <td>400</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Shape</td>
+                                                        <td><img src="images/theatre-layout.png" alt=""></td>
+                                                        <td><img src="images/class-layout.png" alt=""></td>
+                                                        <td><img src="images/round-layout.png" alt=""></td>
+                                                        <td><img src="images/u-layout.png" alt=""></td>
+                                                        <td><img src="images/board-layout.png" alt=""></td>
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                            </div>
+                        </div>
+                        
+                        <div class="card" id="technology">
+                            <h4 class="card-header">Technology & Equipment</h4>
+                            <div class="card-body">
+                                    <ul>
+                                        <li><i class="fa fa-snowflake-o" aria-hidden="true"></i> Air Condition</i></li>
+                                        <li><i class="fa fa-wheelchair" aria-hidden="true"></i> Disable access</i></li>
+                                        <li><i class="fa fa-wifi" aria-hidden="true"></i> Free WIFI</i></li>
+                                    </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="card" id="about">
+                            <h4 class="card-header">About</h4>
+                            <div class="card-body">
+                                <p>Check availabity online for Star Banquetes,Jayanagar 4th Block, Bangalore. Star Banquetes is a banquet hall located in Jayanagar 4th Block , Bangalore .The banquet hall seating capacity is 300 and floating up to 600 can manage.This venue has car parking facility also which can park up to 20 cars. Outside food allowed at this banquet hall.Events permitted at Star Banquetes are Engagement,Wedding Reception,Birthday Party,Get Together Party,Anniversary,Kitty Party,Naming Ceremony.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="card" id="suited">
+                            <h4 class="card-header">Suited for</h4>
+                            <div class="card-body">
+                                <h4 class="card-title">Special title treatment</h4>
+                            </div>
+                        </div>
+                        
+                        <div class="card" id="distance">
+                            <h4 class="card-header">Distance from</h4>
+                            <div class="card-body">
+                                <h4 class="card-title">Special title treatment</h4>
+                            </div>
+                        </div>
+                        
+                        <div class="card" id="policies">
+                            <h4 class="card-header">Booking policies</h4>
+                            <div class="card-body">
+                                <h4 class="card-title">Special title treatment</h4>
+                            </div>
+                        </div>
+
+                        <div class="card" id="calendars">
+                            <h4 class="card-header">Event Calendar</h4>
+                            <div class="card-body">
+                                <div id='calendar'></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                            <div class="contact-details">
+                                <h5>Talk to Venue Manager:</h5>
+                                <p><i class="fa fa-phone"></i> 08030752877 ext:13#</p>
+                            </div>
+                        <div class="search-again-details">
+                                <h4>Check Availability</h4>
+                                <form class="form">
+                                    <div class="form-group">
+                                        <input class="form-control" type="text" placeholder="Enter You location">
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control" type="date">
+                                    </div>
+                                    <div class="form-group">
+                                        <select class="form-control" name="type" id="type">
+                                            <option value="#">Party Hall</option>
+                                            <option value="#">Weding Hall</option>
+                                            <option value="#">Family Hall</option>
+                                            <option value="#">Business Hall</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-warning btn-block">Search</button>
+                                    </div>
+                                </form>
+                                
+                            </div>  
+                            <div class="nearby">
+                                <h5>Nearby Venue</h5>
+                                <ul>
+                                    <li><a href="#">Business Hall</a></li>
+                                    <li><a href="#">Family Hall</a></li>
+                                    <li><a href="#">Weding Hall</a></li>
+                                    <li><a href="#">Party Hall</a></li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="maps" id="maps">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>Location Map</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3649.8168984086756!2d90.42565151498277!3d23.825109234552585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sbashundhara+convention+center!5e0!3m2!1sen!2s!4v1508062777963" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="p-venue">
+        <div class="container">
+          <h2>Party Halls, Banquet Halls around Your Area</h2>
+          <span class="divi"></span>
+          <div class="row">
+            <div class="col-lg-3">
+                <div class="card">
+                    <img class="card-img-top" src="images/v1.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-warning">Details</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3">
+                <div class="card">
+                    <img class="card-img-top" src="images/v2.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-warning">Details</a>
+                    </div>
+                </div>
+            </div>
+                
+            <div class="col-lg-3">
+                <div class="card">
+                    <img class="card-img-top" src="images/v3.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-warning">Details</a>
+                    </div>
+                </div>
+            </div>
+                
+            <div class="col-lg-3">
+                <div class="card">
+                    <img class="card-img-top" src="images/v4.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-warning">Details</a>
+                    </div>
+                </div>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+        
+<!-- footer section -->
+    <footer>
+      <div class="footer-opt">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <h3>Products</h3>
+                <ul>
+                  <li><a href="#">Welding</a></li>
+                  <li><a href="#">Safety</a></li>
+                  <li><a href="#">Hardware</a></li>
+                  <li><a href="#">Measurements</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h3>Company</h3>
+                <ul>
+                  <li><a href="#">Careers</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">News Releases</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h3>Support</h3>
+                <ul>
+                  <li><a href="#">Service Locations</a></li>
+                  <li><a href="#">Ordering FAQs</a></li>
+                  <li><a href="#">Where To Buy</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h3>Connect With Us</h3>
+                <ul>
+                  <li><a href="#">facebook</a></li>
+                  <li><a href="#">Safety</a></li>
+                  <li><a href="#">Hardware</a></li>
+                  <li><a href="#">Measurements</a></li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <p>&copy; copyright - 2017 | Developed by <a href="#" target="_blank">Cloud Next Gen. Ltd.</a></p>
+              </div>
+              <div class="col-md-6">
+                
+              </div>
+              
+            </div>
+          </div>
+      </div>
+    </footer>
+
+
+    <!-- custome js -->
+    <script src="js/main.js"></script>
+    <script src="https://fullcalendar.io/js/fullcalendar-3.6.1/lib/moment.min.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="vendors/jquery/jquery.slim.min.js" ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    
+    <script src="vendors/js/bootstrap.min.js" ></script>
+    <script>
+      $(document).ready(function(){
+        $('.carousel').carousel();
+      });
+    </script>
+    <script src="https://fullcalendar.io/js/fullcalendar-3.6.1/fullcalendar.min.js"></script>
+
+    <script>
+            
+                $(document).ready(function() {
+                    
+                    $('#calendar').fullCalendar({
+                        header: {
+                            left: 'prev,next today',
+                            center: 'title',
+                            right: 'month,basicWeek,basicDay'
+                        },
+                        defaultDate: '2017-10-12',
+                        navLinks: true, // can click day/week names to navigate views
+                        editable: true,
+                        eventLimit: true, // allow "more" link when too many events
+                        events: [
+                            {
+                                title: 'All Day Event',
+                                start: '2017-10-01'
+                            },
+                            {
+                                title: 'Long Event',
+                                start: '2017-10-07',
+                                end: '2017-10-10'
+                            },
+                            {
+                                id: 999,
+                                title: 'Repeating Event',
+                                start: '2017-10-09T16:00:00'
+                            },
+                            {
+                                id: 999,
+                                title: 'Repeating Event',
+                                start: '2017-10-16T16:00:00'
+                            },
+                            {
+                                title: 'Conference',
+                                start: '2017-10-11',
+                                end: '2017-10-13'
+                            },
+                            {
+                                title: 'Meeting',
+                                start: '2017-10-12T10:30:00',
+                                end: '2017-10-12T12:30:00'
+                            },
+                            {
+                                title: 'Lunch',
+                                start: '2017-10-12T12:00:00'
+                            },
+                            {
+                                title: 'Meeting',
+                                start: '2017-10-12T14:30:00'
+                            },
+                            {
+                                title: 'Happy Hour',
+                                start: '2017-10-12T17:30:00'
+                            },
+                            {
+                                title: 'Dinner',
+                                start: '2017-10-12T20:00:00'
+                            },
+                            {
+                                title: 'Birthday Party',
+                                start: '2017-10-13T07:00:00'
+                            },
+                            {
+                                title: 'Click for Google',
+                                url: 'http://google.com/',
+                                start: '2017-10-28'
+                            }
+                        ]
+                    });
+                    
+                });
+            
+            </script>
+  </body>
+</html>

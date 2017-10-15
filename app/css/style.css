@@ -245,6 +245,97 @@ body {
       padding: 0px;
       font-size: 13px; }
 
+.venue-details {
+  margin: 15px 0; }
+  .venue-details .nav {
+    background: #f6f6f6;
+    border: 1px solid #dfdfdf; }
+    .venue-details .nav .nav-link {
+      padding: 10px 10px;
+      border-right: 1px solid #eeeeee;
+      color: #333333; }
+      .venue-details .nav .nav-link:hover {
+        color: #000000;
+        font-weight: bold; }
+    .venue-details .nav .active {
+      color: #000000;
+      font-weight: bold; }
+  .venue-details img {
+    width: 100%; }
+  .venue-details h2 {
+    margin: 0px;
+    padding: 5px 0;
+    font-weight: bold; }
+  .venue-details h5 {
+    margin: 0px;
+    padding: 3px 0;
+    font-size: 16px;
+    font-weight: bold; }
+  .venue-details p {
+    margin: 0px;
+    padding: 5px; }
+  .venue-details .breadcrumb {
+    -webkit-border-radius: 0px;
+    border-radius: 0px; }
+  .venue-details .search-again-details {
+    background: #f6f6f6;
+    -webkit-box-shadow: .5px .5px 1px #dddddd;
+    box-shadow: .5px .5px 1px #dddddd;
+    padding: 15px; }
+    .venue-details .search-again-details .form-control {
+      -webkit-border-radius: 0px;
+      border-radius: 0px; }
+  .venue-details .contact-details {
+    background: #f6f6f6;
+    -webkit-box-shadow: .5px .5px 1px #dddddd;
+    box-shadow: .5px .5px 1px #dddddd;
+    padding: 15px;
+    margin-bottom: 15px; }
+  .venue-details .card {
+    margin-bottom: 15px; }
+    .venue-details .card .card-header {
+      font-size: 18px;
+      font-weight: bold; }
+  .venue-details .photos {
+    margin-bottom: 15px; }
+  .venue-details ul {
+    margin: 0;
+    padding: 0; }
+  .venue-details li {
+    list-style: none;
+    float: left;
+    margin-right: 15px;
+    padding: 0px;
+    font-size: 13px;
+    width: 31.99%;
+    background: #f6f6f6;
+    margin: 5px; }
+    .venue-details li .fa {
+      background: #e53935;
+      width: 25px;
+      text-align: center;
+      padding: 6px;
+      color: #ffffff;
+      margin-right: 5px; }
+
+.card {
+  -webkit-border-radius: 0px !important;
+  border-radius: 0px !important; }
+  .card img {
+    -webkit-border-radius: 0px;
+    border-radius: 0px; }
+  .card .btn {
+    -webkit-border-radius: 0px;
+    border-radius: 0px; }
+
+.btn {
+  -webkit-border-radius: 0px !important;
+  border-radius: 0px !important; }
+
+#calendar {
+  max-width: 900px;
+  margin: 0 auto; }
+
 .subpage-header {
   overflow: hidden;
   color: #ffffff; }

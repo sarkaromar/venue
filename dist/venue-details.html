@@ -13,7 +13,7 @@
     <!-- fontawesome -->
     <script src="https://use.fontawesome.com/d36ff73a94.js"></script>
     <!-- calender -->
-    <link rel="stylesheet" href="https://fullcalendar.io/js/fullcalendar-3.6.1/fullcalendar.min.css">
+    <link rel="stylesheet" href="css/fullcalendar.min.css">
   </head>
   <body>
 <!-- header section -->
@@ -32,9 +32,9 @@
             <div class="col-md-6">
               <div class="top-nav">
                 <ul>
-                    <li><a href="login.html">Sign in</a></li>
-                    <li><a href="where.html">Contact us</a></li>
-                    <li><a href="about.html">About us</a></li>
+                        <li><a href="signin.html">Sign in</a></li>
+                        <li><a href="contact.html">Contact us</a></li>
+                        <li><a href="about.html">About us</a></li>
                 </ul>
               </div>
             </div>
@@ -49,14 +49,14 @@
     <section class="main-body">
         <div class="venue-details">
             <div class="container">
-                <!-- <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item active">Library</li>
-                </ol> -->
                 <div class="row">
                     <div class="col-lg-9">
-                        <h2>Venue Full Name</h2>
-                        <p> 62, 11th main, 3rd floor, Cool Joint Junction, Jayanagar 4th Block, Bangalore</p>
+                            <h2>Venue Full Name</h2>
+                            <p> 62, 11th main, 3rd floor, Cool Joint Junction, Jayanagar 4th Block, Bangalore</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-9">
                         <nav class="nav">
                             <a class="nav-link active" href="#packages">Packages</a>
                             <a class="nav-link" href="#facilities">Facilities</a>
@@ -70,7 +70,119 @@
                             <a class="nav-link" href="#maps">Map</a>
                         </nav>
                         <div class="photos">
-                            <img src="images/v1.png" alt="">
+                            
+                            <div id="slider">
+                                    <div id="myCarousel" class="carousel slide">
+                                        <div class="carousel-inner">
+                                            <div class="active item carousel-item" data-slide-number="0">
+                                                <img src="images/v1.png" class="img-fluid">
+                                            </div>
+                                            <div class="item carousel-item" data-slide-number="1">
+                                                <img src="images/v2.jpg" class="img-fluid">
+                                            </div>
+                                            <div class="item carousel-item" data-slide-number="2">
+                                                <img src="images/v3.jpg" class="img-fluid">
+                                            </div>
+                                            <div class="item carousel-item" data-slide-number="3">
+                                                <img src="images/v4.jpg" class="img-fluid">
+                                            </div>
+                                            <div class="item carousel-item" data-slide-number="4">
+                                                <img src="images/v3.jpg" class="img-fluid">
+                                            </div>
+                                            <div class="item carousel-item" data-slide-number="5">
+                                                <img src="images/v2.jpg" class="img-fluid">
+                                            </div>
+                                            <div class="item carousel-item" data-slide-number="6">
+                                                <img src="images/v4.jpg" class="img-fluid">
+                                            </div>
+                                            <div class="item carousel-item" data-slide-number="7">
+                                                <img src="images/v1.png" class="img-fluid">
+                                            </div>
+                                            <div class="item carousel-item" data-slide-number="8">
+                                                <img src="images/v2.jpg" class="img-fluid">
+                                            </div>
+                                            <div class="item carousel-item" data-slide-number="9">
+                                                <img src="images/v3.jpg" class="img-fluid">
+                                            </div>
+                                            <div class="item carousel-item" data-slide-number="10">
+                                                <img src="images/v4.jpg" class="img-fluid">
+                                            </div>
+                                            <div class="item carousel-item" data-slide-number="11">
+                                                <img src="images/v2.jpg" class="img-fluid">
+                                            </div>
+                                            <div class="slider-controler">
+                                                <a class="carousel-control left pt-3" href="#myCarousel" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+                                                <a class="carousel-control right pt-3" href="#myCarousel" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+                                            </div>
+                    
+                                        </div>
+                                        <!-- main slider carousel nav controls -->
+                    
+                                        <ul class="carousel-indicators list-inline">
+                                            <li class="list-inline-item active">
+                                                <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#myCarousel">
+                                                    <img src="images/v1.png" class="img-fluid">
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a id="carousel-selector-1" data-slide-to="1" data-target="#myCarousel">
+                                                    <img src="images/v2.jpg" class="img-fluid">
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a id="carousel-selector-2" data-slide-to="2" data-target="#myCarousel">
+                                                    <img src="images/v3.jpg" class="img-fluid">
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a id="carousel-selector-3" data-slide-to="3" data-target="#myCarousel">
+                                                    <img src="images/v4.jpg" class="img-fluid">
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a id="carousel-selector-4" data-slide-to="4" data-target="#myCarousel">
+                                                    <img src="images/v3.jpg" class="img-fluid">
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a id="carousel-selector-5" data-slide-to="5" data-target="#myCarousel">
+                                                    <img src="images/v2.jpg" class="img-fluid">
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a id="carousel-selector-6" data-slide-to="6" data-target="#myCarousel">
+                                                    <img src="images/v4.jpg" class="img-fluid">
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a id="carousel-selector-7" data-slide-to="7" data-target="#myCarousel">
+                                                    <img src="images/v1.png" class="img-fluid">
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a id="carousel-selector-8" data-slide-to="8" data-target="#myCarousel">
+                                                    <img src="images/v2.jpg" class="img-fluid">
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a id="carousel-selector-9" data-slide-to="9" data-target="#myCarousel">
+                                                    <img src="images/v3.jpg" class="img-fluid">
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a id="carousel-selector-10" data-slide-to="10" data-target="#myCarousel">
+                                                    <img src="images/v4.jpg" class="img-fluid">
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a id="carousel-selector-11" data-slide-to="11" data-target="#myCarousel">
+                                                    <img src="images/v2.jpg" class="img-fluid">
+                                                </a>
+                                            </li>
+                                        </ul>
+                                </div>
+                            </div>
+
                         </div>
 
                         <div class="card" id="highlights">
@@ -243,21 +355,50 @@
                         <div class="card" id="suited">
                             <h4 class="card-header">Suited for</h4>
                             <div class="card-body">
-                                <h4 class="card-title">Special title treatment</h4>
+                                <ul>
+                                    <li><i class="fa fa-tag"></i> Anniversary</li>
+                                    <li><i class="fa fa-tag"></i> Baby Shower</li>
+                                    <li><i class="fa fa-tag"></i> Bachelor Party</li>
+                                    <li><i class="fa fa-tag"></i> Baptism</li>
+                                    <li><i class="fa fa-tag"></i> Birthday Party</li>
+                                    <li><i class="fa fa-tag"></i> Engagement</li>
+                                    <li><i class="fa fa-tag"></i> Get-Together</li>
+                                    <li><i class="fa fa-tag"></i> Kitty Party</li>
+                                    <li><i class="fa fa-tag"></i> Naming Cermony</li>
+                                    <li><i class="fa fa-tag"></i> Reception</li>
+                                    <li><i class="fa fa-tag"></i> Sangeet</li>
+                                    <li><i class="fa fa-tag"></i> Upanayanam</li>
+                                    <li><i class="fa fa-tag"></i> Wedding / Marriage </li>
+                                    <li><i class="fa fa-tag"></i> Annual Function</li>
+                                    <li><i class="fa fa-tag"></i> Board Meetings</li>
+                                    <li><i class="fa fa-tag"></i> Exhibition</li>
+                                    <li><i class="fa fa-tag"></i> Seminars</li>
+                                    <li><i class="fa fa-tag"></i> Team Meeting</li>
+                                </ul>  
                             </div>
                         </div>
                         
                         <div class="card" id="distance">
                             <h4 class="card-header">Distance from</h4>
                             <div class="card-body">
-                                <h4 class="card-title">Special title treatment</h4>
+                                   <p><i class="fa fa-bus"></i> Nearest Bus Stop: NA</p> 
+                                   <p><i class="fa fa-train"></i> Nearest Railway Station: NA</p>
+                                   <p><i class="fa fa-plane"></i> Dhaka International Airport is 40.21 Km</p>
+                                   <p><i class="fa fa-subway"></i> Dhaka City subway Station is 9.28 Km</p>
+                                    
+                                    
+                                    
+                                    
                             </div>
                         </div>
                         
                         <div class="card" id="policies">
                             <h4 class="card-header">Booking policies</h4>
                             <div class="card-body">
-                                <h4 class="card-title">Special title treatment</h4>
+                                <p>
+                                        Total Tax : 14.5 % is applicable on Food & Beverages (F&B) <br>
+                                        Advance Amount : 50% of the estimated billing amount to be paid at the time of booking to confirm the venue and remaining amount need to be paid on the day of the event
+                                </p>
                             </div>
                         </div>
 
@@ -274,12 +415,45 @@
                                 <h5>Talk to Venue Manager:</h5>
                                 <p><i class="fa fa-phone"></i> 08030752877 ext:13#</p>
                             </div>
-                        <div class="search-again-details">
-                                <h4>Check Availability</h4>
+                            
+                            <div class="search-again-details">
+                                    <h4>Check Availability</h4>
+                                    <form class="form">
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" placeholder="Enter Your location">
+                                        </div>
+                                        <div class="form-group">
+                                            <input class="form-control" type="date">
+                                        </div>
+                                        <div class="form-group">
+                                            <select class="form-control" name="type" id="type">
+                                                <option value="#">Party Hall</option>
+                                                <option value="#">Weding Hall</option>
+                                                <option value="#">Family Hall</option>
+                                                <option value="#">Business Hall</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-warning btn-block">Search</button>
+                                        </div>
+                                    </form>
+                                    
+                                </div> 
+                        <div class="contact-details">
+                                <h5>Send to Venue Manager</h5><br>
                                 <form class="form">
-                                    <div class="form-group">
-                                        <input class="form-control" type="text" placeholder="Enter You location">
-                                    </div>
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" placeholder="Enter your full name">
+                                        </div>
+                                        <div class="form-group">
+                                            <input class="form-control" type="email" placeholder="Enter your email">
+                                        </div>
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" placeholder="Enter Phone number">
+                                        </div>
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" placeholder="Enter Your location">
+                                        </div>
                                     <div class="form-group">
                                         <input class="form-control" type="date">
                                     </div>
@@ -291,19 +465,29 @@
                                             <option value="#">Business Hall</option>
                                         </select>
                                     </div>
+                                    <div class="from-group">
+                                        <textarea name="msg" id="msg" cols="30" rows="5" class="form-control"></textarea>
+                                        <br>
+                                    </div>
                                     <div class="form-group">
-                                        <button type="submit" class="btn btn-warning btn-block">Search</button>
+                                        <button type="submit" class="btn btn-warning btn-block">SEND</button>
                                     </div>
                                 </form>
                                 
                             </div>  
+                            
+
                             <div class="nearby">
-                                <h5>Nearby Venue</h5>
+                                <h4>Nearby Venue</h4>
                                 <ul>
-                                    <li><a href="#">Business Hall</a></li>
-                                    <li><a href="#">Family Hall</a></li>
-                                    <li><a href="#">Weding Hall</a></li>
-                                    <li><a href="#">Party Hall</a></li>
+                                    <li><a href="#"><i class="fa fa-map-marker"></i> Business Hall</a></li>
+                                    <li><a href="#"><i class="fa fa-map-marker"></i> Family Hall</a></li>
+                                    <li><a href="#"><i class="fa fa-map-marker"></i> Weding Hall</a></li>
+                                    <li><a href="#"><i class="fa fa-map-marker"></i> Party Hall</a></li>
+                                    <li><a href="#"><i class="fa fa-map-marker"></i> Business Hall</a></li>
+                                    <li><a href="#"><i class="fa fa-map-marker"></i> Family Hall</a></li>
+                                    <li><a href="#"><i class="fa fa-map-marker"></i> Weding Hall</a></li>
+                                    <li><a href="#"><i class="fa fa-map-marker"></i> Party Hall</a></li>
                                 </ul>
                             </div>
                     </div>
@@ -375,68 +559,73 @@
           </div>
         </div>
       </section>
-        
+
+    
 <!-- footer section -->
-    <footer>
-      <div class="footer-opt">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-3 col-md-6">
-                <h3>Products</h3>
-                <ul>
-                  <li><a href="#">Welding</a></li>
-                  <li><a href="#">Safety</a></li>
-                  <li><a href="#">Hardware</a></li>
-                  <li><a href="#">Measurements</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <h3>Company</h3>
-                <ul>
-                  <li><a href="#">Careers</a></li>
-                  <li><a href="#">Contact Us</a></li>
-                  <li><a href="#">News Releases</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <h3>Support</h3>
-                <ul>
-                  <li><a href="#">Service Locations</a></li>
-                  <li><a href="#">Ordering FAQs</a></li>
-                  <li><a href="#">Where To Buy</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <h3>Connect With Us</h3>
-                <ul>
-                  <li><a href="#">facebook</a></li>
-                  <li><a href="#">Safety</a></li>
-                  <li><a href="#">Hardware</a></li>
-                  <li><a href="#">Measurements</a></li>
-                </ul>
+<footer>
+        <div class="footer-opt">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-3 col-md-6">
+                  <h3>ABOUT US</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque illum soluta quis voluptatibus tenetur aspernatur. 
+                    Dolore et maxime numquam doloremque aut nihil commodi, laborum, sint incidunt, molestiae officiis necessitatibus ipsa!</p>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                  <h3>FOR MORE INFO VISIT</h3>
+                  <ul>
+                        <li><a href="how-it-work.html">How it works</a></li>
+                        <li><a href="site-map.html">Sitemap</a></li>
+                        <li><a href="jobs.html">Jobs</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="ads.html">Advertise</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+  
+                  </ul>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                  <h3>EXPLORE VENUES</h3>
+                  <ul>
+                      <li><a href="#">Business Hall</a></li>
+                      <li><a href="#">Family Hall</a></li>
+                      <li><a href="#">Weding Hall</a></li>
+                      <li><a href="#">Party Hall</a></li>
+                  </ul>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                  <h3>SUBSCRIBE</h3>
+                  <p>
+                      Subscribe to our newsletter and stay up to date with the latest offers at venue
+                  </p>
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Enter your email">
+                    <span class="input-group-btn">
+                      <button class="btn btn-danger" type="button">SUBSCRIBE</button>
+                    </span>
+                  </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="copyright">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-6">
-                <p>&copy; copyright - 2017 | Developed by <a href="#" target="_blank">Cloud Next Gen. Ltd.</a></p>
-              </div>
-              <div class="col-md-6">
+        <div class="copyright">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6">
+                  <p>&copy; copyright - 2017 | ALL Rights Reserved. <a href="#">Privacy Policy</a> <a href="#">Terms of Service</a></p>
+                </div>
+                <div class="col-md-6">
+                  
+                </div>
                 
               </div>
-              
             </div>
-          </div>
-      </div>
-    </footer>
-
+        </div>
+      </footer>
+  
 
     <!-- custome js -->
     <script src="js/main.js"></script>
-    <script src="https://fullcalendar.io/js/fullcalendar-3.6.1/lib/moment.min.js"></script>
+    <script src="js/moment.min.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="vendors/jquery/jquery.slim.min.js" ></script>
 
@@ -448,7 +637,7 @@
         $('.carousel').carousel();
       });
     </script>
-    <script src="https://fullcalendar.io/js/fullcalendar-3.6.1/fullcalendar.min.js"></script>
+    <script src="js/fullcalendar.min.js"></script>
 
     <script>
             

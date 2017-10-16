@@ -69,6 +69,9 @@ var sass          = require('gulp-sass'),
       //jquery
       gulp.src('app/js/*.js')
       .pipe(gulp.dest('dist/js'));
+      //vendor css
+      gulp.src('app/css/vendor/*.css')
+      .pipe(gulp.dest('dist/css'));
 
     });
 // default task

@@ -197,15 +197,13 @@ body {
   .search-again h3 {
     padding: 0 15px;
     font-size: 26px; }
-  .search-again .form-inline .form-control {
-    width: 100%;
-    -webkit-border-radius: 0px;
-    border-radius: 0px; }
   .search-again .form-inline .btn {
     -webkit-border-radius: 0px;
     border-radius: 0px;
     text-transform: uppercase;
     font-weight: bold; }
+  .search-again .form-control {
+    width: 100% !important; }
 
 .venue-list .venues {
   background: #f6f6f6;
@@ -221,7 +219,7 @@ body {
     margin: 0;
     padding: 5px 0;
     font-weight: bold;
-    font-size: 24px; }
+    font-size: 20px; }
   .venue-list .venues p {
     margin: 0;
     padding: 4px 0; }
@@ -281,7 +279,8 @@ body {
     background: #f6f6f6;
     -webkit-box-shadow: .5px .5px 1px #dddddd;
     box-shadow: .5px .5px 1px #dddddd;
-    padding: 15px; }
+    padding: 15px;
+    margin-bottom: 15px; }
     .venue-details .search-again-details .form-control {
       -webkit-border-radius: 0px;
       border-radius: 0px; }
@@ -298,6 +297,29 @@ body {
       font-weight: bold; }
   .venue-details .photos {
     margin-bottom: 15px; }
+    .venue-details .photos #myCarousel .list-inline {
+      white-space: nowrap;
+      overflow-x: auto; }
+    .venue-details .photos #myCarousel .carousel-indicators {
+      position: static;
+      left: initial;
+      width: initial;
+      margin-left: initial; }
+    .venue-details .photos #myCarousel .carousel-indicators > li {
+      width: initial;
+      height: initial;
+      text-indent: initial;
+      overflow: hidden; }
+    .venue-details .photos #myCarousel .carousel-indicators > li.active img {
+      opacity: 0.7; }
+    .venue-details .photos .slider-controler {
+      background: rgba(0, 0, 0, 0.25);
+      position: absolute;
+      bottom: 0px;
+      font-size: 36px; }
+      .venue-details .photos .slider-controler a {
+        color: #ffffff;
+        padding: 5px; }
   .venue-details ul {
     margin: 0;
     padding: 0; }
@@ -307,7 +329,7 @@ body {
     margin-right: 15px;
     padding: 0px;
     font-size: 13px;
-    width: 31.99%;
+    width: 23.7%;
     background: #f6f6f6;
     margin: 5px; }
     .venue-details li .fa {
@@ -332,13 +354,60 @@ body {
   -webkit-border-radius: 0px !important;
   border-radius: 0px !important; }
 
+.form-control {
+  width: 100%;
+  -webkit-border-radius: 0px !important;
+  border-radius: 0px !important; }
+
 #calendar {
   max-width: 900px;
   margin: 0 auto; }
 
+.nearby {
+  background: #f6f6f6;
+  -webkit-box-shadow: .5px .5px 1px #dddddd;
+  box-shadow: .5px .5px 1px #dddddd;
+  padding: 15px;
+  margin-top: 15px; }
+  .nearby ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px; }
+  .nearby li {
+    padding: 0;
+    margin: 0;
+    float: none;
+    width: 100%; }
+  .nearby a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    margin: 5px 0;
+    color: #333;
+    font-size: 14px; }
+    .nearby a:hover {
+      text-decoration: none;
+      color: #000000;
+      font-weight: bold; }
+    .nearby a .fa {
+      background: none;
+      color: #333333;
+      padding: 2px;
+      margin: 0; }
+
 .subpage-header {
   overflow: hidden;
   color: #ffffff; }
+
+.sub-page {
+  margin: 25px 0; }
+
+.about-us ul {
+  margin: 0;
+  padding: 0; }
+
+.about-us li {
+  list-style: none; }
 
 .divi {
   height: 1px;
@@ -441,6 +510,9 @@ footer {
       padding: 0; }
     footer .footer-opt li {
       list-style: none; }
+    footer .footer-opt p {
+      color: #cccccc;
+      font-size: 14px; }
     footer .footer-opt a {
       color: #cccccc;
       text-decoration: none;

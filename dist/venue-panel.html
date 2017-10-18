@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Venue Booking | Venue list</title>
+
+    <link rel="stylesheet" href="css/style.min.css" >
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="vendors/css/bootstrap.min.css">
+    <!-- fontawesome -->
+    <script src="https://use.fontawesome.com/d36ff73a94.js"></script>
+    <!-- calender -->
+    <link rel="stylesheet" href="css/fullcalendar.min.css">
+  </head>
+  <body>
+<!-- header section -->
+    <header>
+      <div class="top-sec-sub">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="logo">
+                <a href="index.html">
+                  <!-- <img src="images/logo.png" alt="Logo"> -->
+                  <h1>Venue Booking</h1>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="top-nav pull-right">
+                <ul>
+                    <li><a href="signin.html">Sign in</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                    <li><a href="about.html">About us</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-header">
+            <div class="container">
+                <div class="row">
+                      <div class="col-lg-6">
+                          <h2>
+                              Venue Panel
+                          </h2>
+                      </div>
+                      <div class="col-lg-6"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+<!-- mainbody section -->
+    <section class="main-body">
+        <div class="venue-panel">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="user-sec">
+                            <div class="avater">
+                                <img src="images/4_1.png" alt="">
+                                <div class="venue-user">
+                                    <h3>Venue user name</h3>
+                                    <h4>ID: #0123456789</h4>
+                                </div>
+                                <div class="user-menu">
+                                    <ul>
+                                        <li><a href="#">Profile</a></li>
+                                        <li><a href="#">Venue</a></li>
+                                        <li><a href="#">Venue Gallery</a></li>
+                                        <li><a href="#">Calender</a></li>
+                                        <li><a href="#">Highlights</a></li>
+                                        <li><a href="#">Package</a></li>
+                                        <li><a href="#">Location</a></li>
+                                        <li><a href="#">Account Settings</a></li>
+                                        <li><a href="#">Others</a></li>
+                                    </ul>
+                                </div>
+                                <div class="offers">
+                                    <h1>
+                                        10% off
+                                    </h1> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="user-body-sec">
+                            <table class="table">
+                                <tr>
+                                    <td width="20%"></td>
+                                    <td><img src="images/4_1.png" alt=""> </td>
+                                </tr>
+                                <tr>
+                                    <td>id</td>
+                                    <td>014725</td>
+                                </tr>
+                                <tr>
+                                    <td>Full Name:</td>
+                                    <td>Mr. xyz</td>
+                                </tr>
+                                <tr>
+                                    <td>User Name</td>
+                                    <td>mrxyz</td>
+                                </tr>
+                                <tr>
+                                    <td>Email id</td>
+                                    <td>mrxyz@domain.com</td>
+                                </tr>
+                                <tr>
+                                    <td>Phone</td>
+                                    <td>0123456789</td>
+                                </tr>
+                                <tr>
+                                    <td>About</td>
+                                    <td><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis quis veniam labore distinctio aut libero possimus quia asperiores, neque nemo, ipsam rem excepturi fugit assumenda doloribus explicabo enim, cumque necessitatibus?</p></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="user-settings">
+                                <div class="">
+                                    <h2>Venue settings</h2>
+                                        <div class="venue-photos">
+                                            <h4>Images Gallery</h4>
+                                            <img src="images/v2.jpg" class="img-fluid"> 
+                                            <img src="images/v2.jpg" class="img-fluid"> 
+                                            <img src="images/v2.jpg" class="img-fluid"> 
+                                            <img src="images/v2.jpg" class="img-fluid"> 
+                                            <img src="images/v2.jpg" class="img-fluid"> 
+                                            <div class="clearfix"></div>
+                                            <a class="btn btn-info" href="#">Add New Photo</a>
+                                        </div>
+                
+                                                                
+                                        <div class="card" id="price">
+                                                <h4 class="card-header">Hall Settings</h4>
+                                                <div class="card-body">
+                                                    <h5>Add Hall Rooms</h5>
+                                                    <!-- Room name -->
+                                                    <table class="table table-bordered">
+                                                            <tr>
+                                                                <td>Room name: 01</td>
+                                                                <td>Room Type: Party, Wedding</td>
+                                                                <td>Cepacity: 100 Person</td>
+                                                                <td>Rant: 10000/day</td>
+                                                                <td><a href="#" class="btn btn-info"><i class="fa fa-plus"></i></a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input type="text" class="form-control" placeholder="Room Name"></td>
+                                                                <td><input type="text" class="form-control" placeholder="Room Type"></td>
+                                                                <td><input type="text" class="form-control" placeholder="Room Cepacity"></td>
+                                                                <td><input type="text" class="form-control" placeholder="Room rant"></td>
+                                                                <td><a href="#" class="btn btn-success"><i class="fa fa-check" aria-hidden="true"></i></a></td>
+                                                            </tr>
+                                                    </table>
+                                                    <!-- Room type -->
+                                                    <!-- Cepacity -->
+                                                    <!-- Rant -->
+                                                </div>
+                                            </div>
+                                        
+                                        <div class="card" id="packages">
+                                            <h4 class="card-header">Packages</h4>
+                                            <div class="card-body">
+                                                <table class="table table-bordered">
+                                                    <thead>
+                                                        <tr>
+                                                            <td>Packages 1</td>
+                                                            <td>Packages 2</td>
+                                                            <td>Packages 3</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                            <tr>
+                                                                <td>200</td>
+                                                                <td>100</td>
+                                                                <td>400</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>80</td>
+                                                                <td>300</td>
+                                                                <td>400</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>80</td>
+                                                                <td>300</td>
+                                                                <td>400</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><a class="btn btn-warning">Details</a></td>
+                                                                <td><a class="btn btn-warning">Details</a></td>
+                                                                <td><a class="btn btn-warning">Details</a></td>
+                                                            </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                
+                                        <div class="card" id="facilities">
+                                            <h4 class="card-header">Facilities</h4>
+                                            <div class="card-body">
+                                                <div class="form-check">
+                                                    <label class="form-check-label">
+                                                    <input type="checkbox" class="form-check-input">
+                                                    <i class="fa fa-snowflake-o" aria-hidden="true"></i> Air Condition
+                                                    </label>
+                                                </div>
+                                                
+                                                <div class="form-check">
+                                                    <label class="form-check-label">
+                                                    <input type="checkbox" class="form-check-input">
+                                                    <i class="fa fa-wheelchair" aria-hidden="true"></i> Disable access
+                                                    </label>
+                                                </div>
+                                                
+                                                <div class="form-check">
+                                                    <label class="form-check-label">
+                                                    <input type="checkbox" class="form-check-input">
+                                                    <i class="fa fa-wifi" aria-hidden="true"></i> Free WIFI
+                                                    </label>
+                                                </div>
+                                                
+                                                <div class="form-check">
+                                                        <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input">
+                                                        <i class="fa fa-car"></i> CAR Parking Facilities</i></li>
+                                                    </label>
+                                                    </div>
+                                                
+                                                <div class="form-check">
+                                                        <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input">
+                                                        <i class="fa fa-snowflake-o" aria-hidden="true"></i> Air Condition</i>
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                            <label class="form-check-label">
+                                                            <input type="checkbox" class="form-check-input"><i class="fa fa-university" aria-hidden="true"></i> Hall Facilities</i>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                        <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input"><i class="fa fa-cutlery" aria-hidden="true"></i> Food Facilities</i>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                        <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input"><i class="fa fa-glass" aria-hidden="true"></i> Bar/Drinks</i>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                        <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input"><i class="fa fa-wheelchair" aria-hidden="true"></i> Disable access</i>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                        <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input"><i class="fa fa-wifi" aria-hidden="true"></i> Free WIFI</i>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card" id="capacity">
+                                            <h4 class="card-header">Capacity</h4>
+                                            <div class="card-body">
+                                                <table class="table table-bordered">
+                                                    <thead>
+                                                        <tr>
+                                                            <td>Minimum</td>
+                                                            <td>Floating Capacity</td>
+                                                            <td>Maximum Seating</td>
+                                                            <td></td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><input type="text" class="form-control" placeholder="Minimum Cepacity"></td>
+                                                            <td><input type="text" class="form-control" placeholder="Floating Cepacity"></td>
+                                                            <td><input type="text" class="form-control" placeholder="Maximum Cepacity"></td>
+                                                            <td><a class="btn btn-info" href="#">Update</a></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="card" id="food">
+                                            <h4 class="card-header">Food and Drinks</h4>
+                                            <div class="card-body">
+                                                <div class="form-check">
+                                                    <label class="form-check-label">
+                                                    <input type="checkbox" class="form-check-input">
+                                                    Food Type: Veg & Non-Veg allowed
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input">
+                                                        Drinks:  Allowed
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input">
+                                                        Catering:  Option to choose inhouse / outside
+                                                    </label>
+                                                </div>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="card" id="seat">
+                                            <h4 class="card-header">Seating Arrangements</h4>
+                                            <div class="card-body">
+                                                
+                                                    <table class="table table-bordered seat" widtg="100%">
+                                                            <thead>
+                                                                <tr>
+                                                                    <td>Shape Name</td>
+                                                                    <td>Theater</td>
+                                                                    <td>Class</td>
+                                                                    <td>Cluster</td>
+                                                                    <td>UShape</td>
+                                                                    <td>Board</td>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                    <tr>
+                                                                        <td>Shape</td>
+                                                                        <td><img src="images/theatre-layout.png" alt=""></td>
+                                                                        <td><img src="images/class-layout.png" alt=""></td>
+                                                                        <td><img src="images/round-layout.png" alt=""></td>
+                                                                        <td><img src="images/u-layout.png" alt=""></td>
+                                                                        <td><img src="images/board-layout.png" alt=""></td>
+                                                                    </tr>
+                                                                    
+                                                                    <tr>
+                                                                            <td>Capacity</td>
+                                                                            <td>80</td>
+                                                                            <td>300</td>
+                                                                            <td>400</td>
+                                                                            <td>400</td>
+                                                                            <td>400</td>
+                                                                        </tr>
+                                                                        
+                                                                    <tr>
+                                                                            <td></td>
+                                                                            <td><input type="text" class="form-control" placeholder="Cepacity"></td>
+                                                                            <td><input type="text" class="form-control" placeholder="Cepacity"></td>
+                                                                            <td><input type="text" class="form-control" placeholder="Cepacity"></td>
+                                                                            <td><input type="text" class="form-control" placeholder="Cepacity"></td>
+                                                                            <td><input type="text" class="form-control" placeholder="Cepacity"></td>
+                                                                        </tr>
+                                                            </tbody>
+                                                        </table>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="card" id="technology">
+                                            <h4 class="card-header">Technology & Equipment</h4>
+                                            <div class="card-body">
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input">
+                                                        <i class="fa fa-snowflake-o" aria-hidden="true"></i> Air Condition
+                                                        </label>
+                                                    </div>
+                                                    
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input">
+                                                        <i class="fa fa-wheelchair" aria-hidden="true"></i> Disable access
+                                                        </label>
+                                                    </div>
+                                                    
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input">
+                                                        <i class="fa fa-wifi" aria-hidden="true"></i> Free WIFI
+                                                        </label>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="card" id="about">
+                                            <h4 class="card-header">About</h4>
+                                            <div class="card-body">
+                                                <p>Check availabity online for Star Banquetes,Jayanagar 4th Block, Bangalore. Star Banquetes is a banquet hall located in Jayanagar 4th Block , Bangalore .The banquet hall seating capacity is 300 and floating up to 600 can manage.This venue has car parking facility also which can park up to 20 cars. Outside food allowed at this banquet hall.Events permitted at Star Banquetes are Engagement,Wedding Reception,Birthday Party,Get Together Party,Anniversary,Kitty Party,Naming Ceremony.</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="card" id="suited">
+                                            <h4 class="card-header">Suited for</h4>
+                                            <div class="card-body">
+                                                <label class="form-check-label"><input type="checkbox" class="form-check-input"><i class="fa fa-tag"></i> Anniversary</label>
+                                                <label class="form-check-label"><input type="checkbox" class="form-check-input"><i class="fa fa-tag"></i> Baby Shower</label>
+                                                <label class="form-check-label"><input type="checkbox" class="form-check-input"><i class="fa fa-tag"></i> Bachelor Party</label>
+                                                <label class="form-check-label"><input type="checkbox" class="form-check-input"><i class="fa fa-tag"></i> Baptism</label>
+                                                <label class="form-check-label"><input type="checkbox" class="form-check-input"><i class="fa fa-tag"></i> Birthday Party</label>
+                                                <label class="form-check-label"><input type="checkbox" class="form-check-input"><i class="fa fa-tag"></i> Engagement</label>
+                                                <label class="form-check-label"><input type="checkbox" class="form-check-input"><i class="fa fa-tag"></i> Get-Together</label>
+                                                <label class="form-check-label"><input type="checkbox" class="form-check-input"><i class="fa fa-tag"></i> Kitty Party</label>
+                                                <label class="form-check-label"><input type="checkbox" class="form-check-input"><i class="fa fa-tag"></i> Naming Cermony</label>
+                                                <label class="form-check-label"><input type="checkbox" class="form-check-input"><i class="fa fa-tag"></i> Reception</label>
+                                                <label class="form-check-label"><input type="checkbox" class="form-check-input"><i class="fa fa-tag"></i> Sangeet</label>
+                                                <label class="form-check-label"><input type="checkbox" class="form-check-input"><i class="fa fa-tag"></i> Upanayanam</label>
+                                                <label class="form-check-label"><input type="checkbox" class="form-check-input"><i class="fa fa-tag"></i> Wedding / Marriage</label>
+                                                <label class="form-check-label"><input type="checkbox" class="form-check-input"><i class="fa fa-tag"></i> Annual Function</label>
+                                                <label class="form-check-label"><input type="checkbox" class="form-check-input"><i class="fa fa-tag"></i> Board Meetings</label>
+                                                <label class="form-check-label"><input type="checkbox" class="form-check-input"><i class="fa fa-tag"></i> Exhibition</label>
+                                                <label class="form-check-label"><input type="checkbox" class="form-check-input"><i class="fa fa-tag"></i> Seminars</label>
+                                                <label class="form-check-label"><input type="checkbox" class="form-check-input"><i class="fa fa-tag"></i> Team Meeting</label> 
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="card" id="distance">
+                                            <h4 class="card-header">Distance from</h4>
+                                            <div class="card-body">
+                                                   <p><i class="fa fa-bus"></i> Nearest Bus Stop: NA <input type="text" class="form-control" placeholder="km if not availble just type NA"></p> 
+                                                   <p><i class="fa fa-train"></i> Nearest Railway Station: NA<input type="text" class="form-control" placeholder="km"></p>
+                                                   <p><i class="fa fa-plane"></i> Dhaka International Airport is 40.21 Km<input type="text" class="form-control" placeholder="km"></p>
+                                                   <p><i class="fa fa-subway"></i> Dhaka City subway Station is 9.28 Km<input type="text" class="form-control" placeholder="km"></p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="card" id="policies">
+                                            <h4 class="card-header">Booking policies</h4>
+                                            <div class="card-body">
+                                                <p>
+                                                        Total Tax : 14.5 % is applicable on Food & Beverages (F&B) <br>
+                                                        Advance Amount : 50% of the estimated billing amount to be paid at the time of booking to confirm the venue and remaining amount need to be paid on the day of the event
+                                                </p>
+
+                                            </div>
+                                        </div>
+                
+                                        <div class="card" id="calendars">
+                                            <h4 class="card-header">Event Calendar</h4>
+                                            <div class="card-body">
+                                                <div id='calendar'></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- footer section -->
+<footer>
+    <div class="footer-opt">
+        <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <h3>ABOUT US</h3>
+                <p> 
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Neque illum soluta quis voluptatibus tenetur aspernatur. 
+                    Dolore et maxime numquam doloremque aut nihil commodi, laborum, sint incidunt, molestiae officiis necessitatibus ipsa!
+                </p>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h3>FOR MORE INFO VISIT</h3>
+                <ul>
+                <li><a href="how-it-work.html">How it works</a></li>
+                <li><a href="site-map.html">Sitemap</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="ads.html">Advertise</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h3>EXPLORE VENUES</h3>
+                <ul>
+                    <li><a href="#">Business Hall</a></li>
+                    <li><a href="#">Family Hall</a></li>
+                    <li><a href="#">Weding Hall</a></li>
+                    <li><a href="#">Party Hall</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h3>SUBSCRIBE</h3>
+                <p>
+                    Subscribe to our newsletter and stay up to date with the latest offers at venue
+                </p>
+                <div class="input-group">
+                <input type="text" class="form-control" placeholder="Enter your email">
+                <span class="input-group-btn">
+                    <button class="btn btn-danger" type="button">SUBSCRIBE</button>
+                </span>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+            <div class="col-md-6">
+                <p>&copy; copyright - 2017 | ALL Rights Reserved. <a href="#">Privacy Policy</a> <a href="#">Terms of Service</a></p>
+            </div>
+            <div class="col-md-6">
+                
+            </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+  
+    <!-- custome js -->
+    <script src="js/main.js"></script>
+    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="vendors/jquery/jquery.slim.min.js" ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    
+    <script src="vendors/js/bootstrap.min.js" ></script>
+    <script>
+      $(document).ready(function(){
+        $('.carousel').carousel();
+      });
+    </script>
+    
+  </body>
+</html>

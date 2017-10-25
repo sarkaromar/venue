@@ -10,9 +10,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Common;
 
 // get authentication controller
-use App\Http\Controllers\Authentication; // may
-
-use Session;
+use App\Http\Controllers\Authentication;
 
 
 class Dashboard extends Controller {
@@ -20,32 +18,29 @@ class Dashboard extends Controller {
     
     public function __construct(){
         
+        return session('ticket');
         
         $this->auth = new Authentication();
         
         if (!$this->auth->loggedin) {
-            
-            echo 'goto login page!';
-             exit();
-            
-            // redirect(site_url("login"));
-        }else{
-            
-            echo 'goto dashboard';
-            exit();
-            
+            return redirect('/login');
         }
+        
     }
     
     public function index() {
         
         
         
+        $a = $this->auth->result;
+        
+        echo '<pre>';
+print_r($a);
+exit();
+        
         $data = ['title' => 'Dashboard'];
         return view('dashboard', $data);
-        //return redirect('dashboard/');
-        
-        
+      
     }
     
     public function logout(Request $request) {

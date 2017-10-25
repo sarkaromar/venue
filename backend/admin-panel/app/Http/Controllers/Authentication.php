@@ -2,9 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Session;
-
 use Illuminate\Support\Facades\DB;
 
 
@@ -13,10 +10,12 @@ class Authentication  extends Controller {
     // checking user validation
     public function __construct() {
         
+        return session('ticket');
+
         // check from session
-        if(Session::has('ticket')){
+        if(session()->has('ticket')){
             
-            $ticket =  Session::get('ticket');
+            $ticket =  session()->get('ticket');
             
             $result = DB::table('back_user')->select('id', 'name', 'email', 'level', 'status')->where('remember_token', $ticket)->get();
             
@@ -40,7 +39,7 @@ class Authentication  extends Controller {
             
             
             $msg = "Please, Logged in first!";
-            $request->session()->flash('error', $msg);
+            session()->flash('error', $msg);
             return redirect('/login');
             
         }

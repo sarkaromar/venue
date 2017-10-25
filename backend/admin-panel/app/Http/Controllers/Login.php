@@ -63,8 +63,14 @@ class Login extends Controller {
                 }else{
                     
                     // put ticket into session
-                    Session::put('ticket', $request->input('_token'));
+                    // Session::put('ticket', $request->input('_token'));
                     // $request->session()->put('ticket', $request->input('_token'));
+                    
+                    session()->put('ticket', $request->input('_token'));
+                    
+                    
+                    $data = Session()->get('ticket');
+                    
                     return redirect('/dashboard');
                     
                 }

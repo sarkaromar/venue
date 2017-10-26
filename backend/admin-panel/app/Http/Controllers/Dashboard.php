@@ -2,42 +2,18 @@
 
 namespace App\Http\Controllers;
 
-// for recv psot data
+use App\Http\Controllers\Authon;
 use Illuminate\Http\Request;
-use App\Http\Requests;
-
-// get commont controller
-use App\Http\Controllers\Common;
-
-// get authentication controller
-use App\Http\Controllers\Authentication;
-
+use Illuminate\Support\Facades\Redirect;
+use DB;
+use Session;
+session_start();
 
 class Dashboard extends Controller {
     
-    
-    public function __construct(){
-        
-        return session('ticket');
-        
-        $this->auth = new Authentication();
-        
-        if (!$this->auth->loggedin) {
-            return redirect('/login');
-        }
-        
-    }
-    
     public function index() {
         
-        
-        
-        $a = $this->auth->result;
-        
-        echo '<pre>';
-print_r($a);
-exit();
-        
+        (new Authon)->check();
         $data = ['title' => 'Dashboard'];
         return view('dashboard', $data);
       
@@ -49,6 +25,7 @@ exit();
         return redirect('/login');
         
     }
+    
     
     
 

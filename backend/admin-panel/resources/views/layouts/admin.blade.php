@@ -14,14 +14,31 @@
         
         <!-- Morris Charts CSS -->
         <link href="{{url('/')}}/public/assets/vendors/bower_components/morris.js/morris.css" rel="stylesheet" type="text/css"/>
-    
+        
         <!-- Data table CSS -->
         <link href="{{url('/')}}/public/assets/vendors/bower_components/datatables/media/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
+        <link href="{{url('/')}}/public/assets/vendors/bower_components/datatables.net-responsive/css/responsive.dataTables.min.css" rel="stylesheet" type="text/css"/>
         
+        <!-- Bootstrap table CSS -->
+        <link href="{{url('/')}}/public/assets/vendors/bower_components/bootstrap-table/dist/bootstrap-table.css" rel="stylesheet" type="text/css"/>
+
+        <!-- unknown -->
         <link href="{{url('/')}}/public/assets/vendors/bower_components/jquery-toast-plugin/dist/jquery.toast.min.css" rel="stylesheet" type="text/css">
         
         <!-- Styles -->
         <link href="{{url('/')}}/public/assets/dist/css/style.css" rel="stylesheet" type="text/css">
+        
+        <script>
+            function check() {
+                var chk = confirm("Are you sure want to do this?");
+                if (chk) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        </script>
+    
     </head>
     <body>
         <div class="wrapper theme-1-active pimary-color-green">
@@ -52,7 +69,6 @@
                 <div id="mobile_only_nav" class="mobile-only-nav pull-right">
                     <ul class="nav navbar-right top-nav pull-right">
                         <!--some functionality here-->
-                        
                         <!--user info-->
                         <li class="dropdown auth-drp">
                             <a href="#" class="dropdown-toggle pr-0" data-toggle="dropdown"><img src="{{url('/')}}/public/assets/dist/img/user1.png" alt="" class="user-auth-img img-circle"/><span class="user-online-status"></span></a>
@@ -82,7 +98,7 @@
                     </li>
                     <!--admin user-->
                     <li>
-                        <a href="{{url('/admin-user')}}"><div class="pull-left"><i class="fa fa-fw fa-users mr-20"></i><span class="right-nav-text">Admin User</span></div><div class="clearfix"></div></a>
+                        <a href="{{url('/user')}}"><div class="pull-left"><i class="fa fa-fw fa-users mr-20"></i><span class="right-nav-text">User</span></div><div class="clearfix"></div></a>
                     </li>
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#dropdown_dr_lv1"><div class="pull-left"><i class="zmdi zmdi-filter-list mr-20"></i><span class="right-nav-text">multilevel</span></div><div class="pull-right"><i class="zmdi zmdi-caret-down"></i></div><div class="clearfix"></div></a>
@@ -134,6 +150,17 @@
         <script src="{{url('/')}}/public/assets/vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="{{url('/')}}/public/assets/vendors/bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
         <script src="{{url('/')}}/public/assets/dist/js/dataTables-data.js"></script>
+        
+        <!-- Bootstrap-table JavaScript -->
+        <script src="{{url('/')}}/public/assets/vendors/bower_components/bootstrap-table/dist/bootstrap-table.min.js"></script>
+        <script src="{{url('/')}}/public/assets/dist/js/bootstrap-table-data.js"></script>
+        
+        
+         <!-- Data table JavaScript -->
+        <script src="{{url('/')}}/public/assets/vendors/bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+        <script src="{{url('/')}}/public/assets/vendors/bower_components/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+        <script src="{{url('/')}}/public/assets/vendors/bower_components/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+        <script src="{{url('/')}}/public/assets/dist/js/responsive-datatable-data.js"></script>
         
         <!-- Slimscroll JavaScript -->
 	<script src="{{url('/')}}/public/assets/dist/js/jquery.slimscroll.js"></script>

@@ -2,25 +2,26 @@
 
 namespace App\Http\Controllers;
 
-// use App\Http\Controllers\Controller;
-
-// for recv psot data
+use App\Http\Controllers\Authon;
+use App\Http\Controllers\Common;
 use Illuminate\Http\Request;
-use App\Http\Requests;
+use Illuminate\Support\Facades\Redirect;
+use DB;
+use Session;
+session_start();
 
-// get table name
-use App\Admin;
-
-class UserController extends Controller {
+class User extends Controller {
     
+    // user list ---------------------------------------------------------------
     public function index() {
         
-        // get list 
-        $admin = new Admin();
-        $data['lists'] = $admin->get();
+        (new Authon)->check();
         
-        $data['title'] = 'user';
-        return view('admin.user.list', $data);
+        $data['lists'] = (new Common)->getall('back_user');
+        
+        $data['title'] = 'User List';
+        
+        return view('user.list', $data);
         
     }
     

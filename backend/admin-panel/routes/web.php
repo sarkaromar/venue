@@ -13,19 +13,20 @@
 
 // root
 Route::get('/', 'Dashboard@index');
-
-
 Route::get('/logout', 'Dashboard@logout');
 
-//register route
+// register route
 Route::get('/register', 'Register@index');
 Route::post('/register/store', 'Register@store');
 
-//login route
+// login route
 Route::get('/login', 'Login@index');
 Route::post('/login/check', 'Login@check');
 
-//dashboard route
+// dashboard route
 Route::get('/dashboard', 'Dashboard@index');
 
-// Route::get('/auth', 'Authentication@index');
+// user route
+Route::get('/user', 'User@index');
+Route::get('/add-user', 'User@add');
+Route::get('/edit-user', 'User@edit'); // variable ashbe

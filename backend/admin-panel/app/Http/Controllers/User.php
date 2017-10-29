@@ -6,9 +6,11 @@ use App\Http\Controllers\Authon;
 use App\Http\Controllers\Common;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+
 use DB;
 use Session;
 session_start();
+
 
 class User extends Controller {
     
@@ -25,193 +27,151 @@ class User extends Controller {
         
     }
     
-    
-    
-    public function add() {
+    // add user ----------------------------------------------------------------
+    public function add(Request $request) {
         
-        // load view
-        $data['title'] = 'add user';
-        return view('admin.user.add', $data);
-        
-    }
-    
-    
-    public function do_add(Request $request) {
-        
-        //dd($request->all());
-        //exit();
-        
-        // validate data
+        // validate
         $this->validate($request, [
             
-            'name' => 'required|max:128',
-            'email' => 'required|email|max:256|unique:users', // unique:users
-            'password' => 'required|min:4',
-            'level' => 'required|integer',
-            'status' => 'required|integer'
+            'name' => 'required|max:256',
+            'email' => 'required|email|max:256|unique:back_user',
+            'password' => 'required|min:4|same:password_confirmation',
+            'password_confirmation' => 'required',
+            'level' => 'required',
+            'admin' => 'required'
             
         ]);
         
-        // save
-        $admin = new Admin();
-        
-        $user_date = [
+        // make array
+        $data = [
             
             'name' => $request->input('name'),
             'email' => $request->input('email'),
-            'password' => sha1($request->input('password')),
+            'password' => sha1(md5($request->input('email').$request->input('password'))),
             'level' => $request->input('level'),
-            'status' => $request->input('status')
-            
+            'admin' => $request->input('admin')
+                
         ];
         
-        // redirecting
-        if($admin->insert($user_date)){
+        // save 
+        if((new Common)->save('back_user', $data)){
             
-            $msg = "You are successfully registered!";
+            $msg = "Successfully Added!";
             $request->session()->flash('success', $msg);
-            return redirect('user/');
+            return redirect('/user');
             
         } else {
             
-            $msg = "Data did not save in DB!";
-            $request->session()->flash('error', $msg);
-            return redirect('user/add_user/');
+            $msg = "Not Saved!";
+            $request->session()->flash('danger', $msg);
+            return redirect('/user');
             
         }
         
     }
     
-    
-    
-    public function edit(Request $request, $id) {
+    // edit user ---------------------------------------------------------------
+    public function edit(Request $request) {
         
-        // get user
-        $admin = new Admin();
-        $data['list'] = $admin->where('id', $id)->get();
-        // view
-        $data['title'] = 'Edit user';
-        return view('admin.user.edit', $data);
-        
-    }
-    
-    
-    public function do_edit(Request $request) {
-  
-        // unique eamil validation
+        // exist or new eamil validation -----------------
         if($request->input('email') == $request->input('old_email')){
             
-            // validate
+            // exist old email
             $this->validate($request, [
                 
                 'id' => 'required|integer',
-                'name' => 'required|max:128',
+                'name' => 'required|max:256',
                 'email' => 'required|email|max:256',
-                'password' => 'min:4',
                 'level' => 'required|integer',
-                'status' => 'required|integer'
-
+                'admin' => 'required|integer'
+                
             ]);
             
         } else {
             
-            // unique email validate 
+            // new email
             $this->validate($request, [
 
                 'id' => 'required|integer',
-                'name' => 'required|max:128',
-                'email' => 'required|email|max:256|unique:users',
-                'password' => 'min:4',
+                'name' => 'required|max:256',
+                'email' => 'required|email|max:256|unique:back_user',
                 'level' => 'required|integer',
-                'status' => 'required|integer'
-
+                'admin' => 'required|integer'
+                
             ]);
             
         }
         
+        // exist password or not -----------------
         if(!$request->input('password')){
             
-            // user data
-            $user_date = [
+            // make array
+            $data = [
             
                 'name' => $request->input('name'),
                 'email' => $request->input('email'),
                 'level' => $request->input('level'),
-                'status' => $request->input('status')
-            
+                'admin' => $request->input('admin')
+                
             ];
             
         } else {
             
-            // user data
-            $user_date = [
+            // make array
+            $data = [
             
                 'name' => $request->input('name'),
                 'email' => $request->input('email'),
-                'password' => sha1($request->input('password')),
+                'password' => sha1(md5($request->input('email') . $request->input('password'))),
                 'level' => $request->input('level'),
-                'status' => $request->input('status')
-            
+                'admin' => $request->input('admin')
+                
             ];
             
         }
         
-        // get id
-        $user_id = $request->input('user_id');
-        
-        // save
-        $admin = new Admin();
-        
-        $result = $admin->where('user_id', $user_id)->update($user_date);
-        
-        // redirecting
-        if($result){
+        // update
+        if((new Common)->update('back_user', $request->input('id'), $data)){
             
             $msg = "Successfully Updated!";
             $request->session()->flash('success', $msg);
-            return redirect('user/');
+            return redirect('/user');
             
         } else {
             
-            $msg = "Data did not save in DB!";
+            $msg = "Not Updated!";
             $request->session()->flash('error', $msg);
-            return redirect('user/');
+            return redirect('/user');
             
         }
         
+        
+        
     }
     
-    
-    public function delete(Request $request, $user_id) {
+    // delete user -------------------------------------------------------------
+    public function delete($id) {
         
-        // get user
-        $admin = new Admin();
+        echo '<pre>';
+        print_r($id);
+        exit();
         
-        // redirecting
-        if($admin->where('user_id', $user_id)->delete()){
+        
+        
+        // delete 
+        if((new Common)->delete('back_user', $id)){
             
             $msg = "Successfully Deleted!";
             $request->session()->flash('success', $msg);
-            return redirect('user/');
+            return redirect('/user');
             
         } else {
             
             $msg = "Data did not Delete form DB!";
             $request->session()->flash('error', $msg);
-            return redirect('user/');
+            return redirect('/user');
             
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        // view
-        $data['title'] = 'user';
-        return view('admin.user.list', $data);
         
     }
     

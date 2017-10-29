@@ -44,7 +44,7 @@
                 </div>
                 <div class="clearfix"></div>
             </div>
-            <a href="{{ url('/register') }}" class="btn btn-default"><i class="fa fa-fw fa-arrow-left"></i> Register</a>
+            <!--<a href="{{ url('/register') }}" class="btn btn-default"><i class="fa fa-fw fa-arrow-left"></i> Register</a>-->
             <button type="submit" class="btn btn-success mr-10">Login</button>
             {!! Form::close() !!}
         </div>

@@ -28,5 +28,12 @@ Route::get('/dashboard', 'Dashboard@index');
 
 // user route
 Route::get('/user', 'User@index');
-Route::get('/add-user', 'User@add');
-Route::get('/edit-user', 'User@edit'); // variable ashbe
+Route::post('/add_user', 'User@add');
+Route::post('/edit-user', 'User@edit');
+
+//Route::get('/delete-user/(:num)', 'User@delete/$id');
+
+
+Route::get('/delete-user/(:num)', function($user_name) {
+    echo $user_name;
+});

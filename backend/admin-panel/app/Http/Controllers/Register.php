@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
-// for recv psot data
+use App\Http\Controllers\Common;
 use Illuminate\Http\Request;
-use App\Http\Requests;
+use Illuminate\Support\Facades\Redirect;
+use DB;
 
-// get table name
-use App\Back_user;
+// use Session;
+// session_start();
 
 
 class Register extends Controller {
@@ -21,9 +22,13 @@ class Register extends Controller {
     
     public function store(Request $request) {
         
-        // get table
-        $back_user = new Back_user();
-
+        
+        // front registration -- off
+        // admin by ashbe
+        // 
+        
+        
+        
         $this->validate($request, [
             
             'name' => 'required|max:256',
@@ -37,7 +42,7 @@ class Register extends Controller {
         $user_date = [
             'name' => $request->input('name'),
             'email' => $request->input('email'),
-            'password' => sha1(md5($request->input('password').$request->input('email')))
+            'password' => sha1(md5($request->input('email').$request->input('password')))
         ];
         
         if($back_user->insert($user_date)){

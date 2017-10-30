@@ -22,8 +22,8 @@
         <!-- Bootstrap table CSS -->
         <link href="{{url('/')}}/public/assets/vendors/bower_components/bootstrap-table/dist/bootstrap-table.css" rel="stylesheet" type="text/css"/>
 
-        <!-- unknown -->
-        <link href="{{url('/')}}/public/assets/vendors/bower_components/jquery-toast-plugin/dist/jquery.toast.min.css" rel="stylesheet" type="text/css">
+        <!-- switchery CSS // notifications -->
+        <link href="{{url('/')}}/public/assets/vendors/bower_components/switchery/dist/switchery.min.css" rel="stylesheet" type="text/css"/>
         
         <!-- Styles -->
         <link href="{{url('/')}}/public/assets/dist/css/style.css" rel="stylesheet" type="text/css">
@@ -74,7 +74,7 @@
                             <a href="#" class="dropdown-toggle pr-0" data-toggle="dropdown"><img src="{{url('/')}}/public/assets/dist/img/user1.png" alt="" class="user-auth-img img-circle"/><span class="user-online-status"></span></a>
                             <ul class="dropdown-menu user-auth-dropdown" data-dropdown-in="flipInX" data-dropdown-out="flipOutX">
                                 <li>
-                                    <a href="profile.html"><i class="zmdi zmdi-account"></i><span>Profile</span></a>
+                                    <a href=""><i class="zmdi zmdi-account"></i><span>Profile</span></a>
                                 </li>
                                 <li>
                                     <a href="{{url('/logout')}}"><i class="zmdi zmdi-power"></i><span>Log Out</span></a>
@@ -155,8 +155,7 @@
         <script src="{{url('/')}}/public/assets/vendors/bower_components/bootstrap-table/dist/bootstrap-table.min.js"></script>
         <script src="{{url('/')}}/public/assets/dist/js/bootstrap-table-data.js"></script>
         
-        
-         <!-- Data table JavaScript -->
+        <!-- Data table JavaScript -->
         <script src="{{url('/')}}/public/assets/vendors/bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
         <script src="{{url('/')}}/public/assets/vendors/bower_components/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
         <script src="{{url('/')}}/public/assets/vendors/bower_components/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
@@ -189,7 +188,9 @@
 	<!-- Morris Charts JavaScript -->
         <script src="{{url('/')}}/public/assets/vendors/bower_components/raphael/raphael.min.js"></script>
         <script src="{{url('/')}}/public/assets/vendors/bower_components/morris.js/morris.min.js"></script>
-        <script src="{{url('/')}}/public/assets/vendors/bower_components/jquery-toast-plugin/dist/jquery.toast.min.js"></script>
+        
+        <!--for welcome notification-->
+        <!--<script src="{{url('/')}}/public/assets/vendors/bower_components/jquery-toast-plugin/dist/jquery.toast.min.js"></script>-->
         
         <!-- Switchery JavaScript -->
         <script src="{{url('/')}}/public/assets/vendors/bower_components/switchery/dist/switchery.min.js"></script>
@@ -198,6 +199,8 @@
         <script src="{{url('/')}}/public/assets/dist/js/dropdown-bootstrap-extended.js"></script>
         
         <!-- Init JavaScript -->
+        <!--<script src="{{url('/')}}/public/assets/dist/js/toast-data.js"></script>-->
+        
         <script src="{{url('/')}}/public/assets/dist/js/init.js"></script>
         <script src="{{url('/')}}/public/assets/dist/js/dashboard-data.js"></script>
 

@@ -30,6 +30,8 @@ class User extends Controller {
     // add user ----------------------------------------------------------------
     public function add(Request $request) {
         
+        (new Authon)->check();
+        
         // validate
         $this->validate($request, [
             
@@ -72,6 +74,8 @@ class User extends Controller {
     
     // edit user ---------------------------------------------------------------
     public function edit(Request $request) {
+        
+        (new Authon)->check();
         
         // exist or new eamil validation -----------------
         if($request->input('email') == $request->input('old_email')){
@@ -152,23 +156,19 @@ class User extends Controller {
     // delete user -------------------------------------------------------------
     public function delete($id) {
         
-        echo '<pre>';
-        print_r($id);
-        exit();
-        
-        
+        (new Authon)->check();
         
         // delete 
         if((new Common)->delete('back_user', $id)){
             
             $msg = "Successfully Deleted!";
-            $request->session()->flash('success', $msg);
+            Session::put('success', $msg);
             return redirect('/user');
             
         } else {
             
             $msg = "Data did not Delete form DB!";
-            $request->session()->flash('error', $msg);
+            Session::put('error', $msg);
             return redirect('/user');
             
         }

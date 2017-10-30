@@ -30,10 +30,5 @@ Route::get('/dashboard', 'Dashboard@index');
 Route::get('/user', 'User@index');
 Route::post('/add_user', 'User@add');
 Route::post('/edit-user', 'User@edit');
+Route::get('/delete-user/{id}', 'User@delete');
 
-//Route::get('/delete-user/(:num)', 'User@delete/$id');
-
-
-Route::get('/delete-user/(:num)', function($user_name) {
-    echo $user_name;
-});

@@ -45,7 +45,21 @@
                 </div>
             @endif
             
+            @if (Session::has('error'))
+            <div class="alert alert-error alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <i class="zmdi zmdi-check pr-15 pull-left"></i><p class="pull-left"><strong>!</strong> {{Session::get('error')}}</p> 
+                <div class="clearfix"></div>
+            </div>
+            @endif
             
+            @if (Session::has('success'))
+            <div class="alert alert-success alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <i class="zmdi zmdi-check pr-15 pull-left"></i><p class="pull-left"><strong>YayOpps!</strong> {{Session::get('success')}}</p> 
+                <div class="clearfix"></div>
+            </div>
+            @endif
             
             
             <div class="panel-wrapper collapse in">

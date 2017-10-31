@@ -74,10 +74,10 @@
                             <a href="#" class="dropdown-toggle pr-0" data-toggle="dropdown"><img src="{{url('/')}}/public/assets/dist/img/user1.png" alt="" class="user-auth-img img-circle"/><span class="user-online-status"></span></a>
                             <ul class="dropdown-menu user-auth-dropdown" data-dropdown-in="flipInX" data-dropdown-out="flipOutX">
                                 <li>
-                                    <a href=""><i class="zmdi zmdi-account"></i><span>Profile</span></a>
+                                    <a href="{{url('/profile')}}"><i class="zmdi zmdi-account"></i><span>Profile</span></a>
                                 </li>
                                 <li>
-                                    <a href="{{url('/logout')}}"><i class="zmdi zmdi-power"></i><span>Log Out</span></a>
+                                    <a href="{{url('/logout')}}"><i class="fa fa-fw fa-sign-out"></i><span>Log Out</span></a>
                                 </li>
                             </ul>
                         </li>
@@ -92,13 +92,17 @@
                         <span>Section</span> 
                         <i class="zmdi zmdi-more"></i>
                     </li>
-                    <!--dashboard-->
+                     <!-- dash -->
                     <li>
-                        <a href="{{url('/dashboard')}}"><div class="pull-left"><i class="fa fa-dashboard mr-20"></i><span class="right-nav-text">Dashboard</span></div><div class="clearfix"></div></a>
+                        <a class="<?php if ($menu == 'dash' ) echo 'active' ?>" href="{{url('/dashboard')}}"><div class="pull-left"><i class="fa fa-dashboard mr-20"></i><span class="right-nav-text">Dashboard</span></div><div class="clearfix"></div></a>
                     </li>
-                    <!--admin user-->
+                    <!-- user-->
                     <li>
-                        <a href="{{url('/user')}}"><div class="pull-left"><i class="fa fa-fw fa-users mr-20"></i><span class="right-nav-text">User</span></div><div class="clearfix"></div></a>
+                        <a class="<?php if ($menu == 'user' ) echo 'active' ?>" href="{{url('/user')}}"><div class="pull-left"><i class="fa fa-fw fa-users mr-20"></i><span class="right-nav-text">User</span></div><div class="clearfix"></div></a>
+                    </li>
+                    <!-- settings -->
+                    <li>
+                        <a class="<?php if ($menu == 'settings' ) echo 'active' ?>" href="{{url('/user')}}"><div class="pull-left"><i class="fa fa-fw fa-users mr-20"></i><span class="right-nav-text">Settings</span></div><div class="clearfix"></div></a>
                     </li>
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#dropdown_dr_lv1"><div class="pull-left"><i class="zmdi zmdi-filter-list mr-20"></i><span class="right-nav-text">multilevel</span></div><div class="pull-right"><i class="zmdi zmdi-caret-down"></i></div><div class="clearfix"></div></a>

@@ -17,17 +17,17 @@ class Common extends Controller {
     
     // get all with active(1) status by table
     public function getall_active($table) {
-        $result = DB::table($table)->get();
+        return DB::table($table)->get();
     }
     
     // get all with inactive(1) status by table
     public function getall_inactive($table) {
-        $result = DB::table($table)->get();
+        return DB::table($table)->get();
     }
     
     // get one by id and table
-    public function getone($table) {
-        $result = DB::table($table)->get();
+    public function getone($table, $id) {
+        return DB::table($table)->where('id', $id)->get();
     }
     
     
@@ -44,7 +44,6 @@ class Common extends Controller {
     // update single row
     public function update($table, $id, $data) {
         $r = DB::table($table)->where('id', $id)->update($data);
-        
         if($r){
             return TRUE;
         }  else {
@@ -54,9 +53,7 @@ class Common extends Controller {
     
     // delete a id from table
     public function delete($table, $id) {
-        
         $r = DB::table($table)->where('id', $id)->delete();
-        
         if($r){
             return TRUE;
         }  else {
@@ -64,24 +61,15 @@ class Common extends Controller {
         }
     }
     
-    
-    
-    
-    
-    
-    
-    
-    // for status change ####
+    // status change
     public function status($table, $id, $status) {
-        
         $value = array('status'=> $status);
-        $r = $this->db->where('id', $id)->update($table, $value);
+        $r = DB::table($table)->where('id', $id)->update($value);
         if($r){
             return TRUE;
         }  else {
             return FALSE; 
         }
-        
     }
     
   
@@ -109,6 +97,9 @@ class Common extends Controller {
         return DB::table($table)->where('email', $email)->first();
         
     }
+    
+    
+    
     
     
     

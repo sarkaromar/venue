@@ -29,6 +29,10 @@ Route::get('/dashboard', 'Dashboard@index');
 // user route
 Route::get('/user', 'User@index');
 Route::post('/add_user', 'User@add');
+Route::get('/user-status/{id}/{status}', 'User@status');
 Route::post('/edit-user', 'User@edit');
 Route::get('/delete-user/{id}', 'User@delete');
+
+// profile
+Route::get('/profile', 'Profile@index');
 

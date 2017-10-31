@@ -34,7 +34,6 @@
                 </div>
                 <div class="clearfix"></div>
             </div>
-            
             @if ($errors->any())
                 <div class="alert alert-danger">
                     <ul>
@@ -46,9 +45,9 @@
             @endif
             
             @if (Session::has('error'))
-            <div class="alert alert-error alert-dismissable">
+            <div class="alert alert-danger alert-dismissable">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                <i class="zmdi zmdi-check pr-15 pull-left"></i><p class="pull-left"><strong>!</strong> {{Session::get('error')}}</p> 
+                <i class="zmdi zmdi-block pr-15 pull-left"></i><p class="pull-left"><strong>Opps!</strong> {{Session::get('error')}}</p>
                 <div class="clearfix"></div>
             </div>
             @endif
@@ -56,11 +55,10 @@
             @if (Session::has('success'))
             <div class="alert alert-success alert-dismissable">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                <i class="zmdi zmdi-check pr-15 pull-left"></i><p class="pull-left"><strong>YayOpps!</strong> {{Session::get('success')}}</p> 
+                <i class="zmdi zmdi-check pr-15 pull-left"></i><p class="pull-left"><strong>Yay!</strong> {{Session::get('success')}}</p> 
                 <div class="clearfix"></div>
             </div>
             @endif
-            
             
             <div class="panel-wrapper collapse in">
                 <div class="panel-body">
@@ -103,17 +101,15 @@
                                             ?>
                                         </td>
                                         <td>
-                                            <?php
-                                            if ($list->status == 1) {
-                                                echo "<span class='label label-success'>Active</span>";
-                                            } elseif ($list->status == 0) {
-                                                echo "<span class='label label-danger'>Inactive</span>";
-                                            }
-                                            ?>
+                                            @if ($list->status == 1)
+                                                <a href="{{ url('/user-status/' . $list->id .'/'. '0' ) }}" class="text-success" onclick="return check();" data-toggle="tooltip" title="Click to inactive"><i class="fa fa-check fa-lg"></i></a>
+                                            @else
+                                                <a href="{{ url('/user-status/' . $list->id .'/'. '1' ) }}" class="text-danger" onclick="return check();" data-toggle="tooltip" title="Click to active"><i class="fa fa-times fa-lg"></i></a>
+                                            @endif
                                         </td>
                                         <td>
-                                            <button class="btn btn-default btn-icon-anim btn-xs" data-toggle="modal" data-target="#edit_{{$list->id}}" title="Edit"><i class="fa fa-pencil-square-o"></i></button>
-                                            <a class="btn btn-danger btn-icon-anim btn-xs" href="{{url('delete-user', $list->id)}}" onclick="return check();"><i class="fa fa-eraser"></i></a>
+                                            <a href="#edit_{{$list->id}}" class="text-primary" data-toggle="modal" title="Edit"><i class="fa fa-pencil-square-o fa-lg"></i></a> |
+                                            <a href="{{url('delete-user', $list->id)}}" class="text-danger" onclick="return check();" data-toggle="tooltip" title="Delete"><i class="fa fa-trash-o fa-lg"></i></a>
                                         </td>
                                     </tr>
                                     <!--edit modal-->

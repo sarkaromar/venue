@@ -1,0 +1,3 @@
+<button class="btn btn-default btn-icon-anim btn-xs" data-toggle="modal" data-target="#edit_{{$list->id}}" title="Edit"><i class="fa fa-pencil-square-o"></i></button>
+                                            <a class="btn btn-danger btn-icon-anim btn-xs" href="{{url('delete-user', $list->id)}}" onclick="return check();"><i class="fa fa-eraser"></i></a>
+                                        

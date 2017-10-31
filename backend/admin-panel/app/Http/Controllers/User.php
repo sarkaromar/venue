@@ -14,7 +14,7 @@ session_start();
 
 class User extends Controller {
     
-    // user list ---------------------------------------------------------------
+    // list --------------------------------------------------------------------
     public function index() {
         
         (new Authon)->check();
@@ -23,11 +23,13 @@ class User extends Controller {
         
         $data['title'] = 'User List';
         
+        $data['menu'] = 'user';
+        
         return view('user.list', $data);
         
     }
     
-    // add user ----------------------------------------------------------------
+    // add ---------------------------------------------------------------------
     public function add(Request $request) {
         
         (new Authon)->check();
@@ -59,20 +61,20 @@ class User extends Controller {
         if((new Common)->save('back_user', $data)){
             
             $msg = "Successfully Added!";
-            $request->session()->flash('success', $msg);
+            Session::flash('success', $msg);
             return redirect('/user');
             
         } else {
             
             $msg = "Not Saved!";
-            $request->session()->flash('danger', $msg);
+            Session::flash('error', $msg);
             return redirect('/user');
             
         }
         
     }
     
-    // edit user ---------------------------------------------------------------
+    // edit --------------------------------------------------------------------
     public function edit(Request $request) {
         
         (new Authon)->check();
@@ -138,13 +140,13 @@ class User extends Controller {
         if((new Common)->update('back_user', $request->input('id'), $data)){
             
             $msg = "Successfully Updated!";
-            $request->session()->flash('success', $msg);
+            Session::flash('success', $msg);
             return redirect('/user');
             
         } else {
             
             $msg = "Not Updated!";
-            $request->session()->flash('error', $msg);
+            Session::flash('error', $msg);
             return redirect('/user');
             
         }
@@ -153,7 +155,23 @@ class User extends Controller {
         
     }
     
-    // delete user -------------------------------------------------------------
+    // status ------------------------------------------------------------------
+    public function status($id, $status) {
+        
+        (new Authon)->check();
+        
+        // status 
+        if((new Common)->status('back_user', $id, $status)){
+            
+            $msg = "Successfully Updated!";
+            Session::flash('success', $msg);
+            return redirect('/user');
+            
+        }
+                   
+    }
+    
+    // delete ------------------------------------------------------------------
     public function delete($id) {
         
         (new Authon)->check();
@@ -162,13 +180,13 @@ class User extends Controller {
         if((new Common)->delete('back_user', $id)){
             
             $msg = "Successfully Deleted!";
-            Session::put('success', $msg);
+            Session::flash('success', $msg);
             return redirect('/user');
             
         } else {
             
             $msg = "Data did not Delete form DB!";
-            Session::put('error', $msg);
+            Session::flash('error', $msg);
             return redirect('/user');
             
         }

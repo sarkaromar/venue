@@ -14,12 +14,18 @@ class Dashboard extends Controller {
     public function index() {
         
         (new Authon)->check();
-        $data = ['title' => 'Dashboard'];
+        
+        $data['title'] = 'Dashboard';
+        
+        $data['menu'] = 'dash';
+        
         return view('dashboard', $data);
       
     }
     
     public function logout(Request $request) {
+        
+        (new Authon)->check();
         
         $request->session()->flush();
         return redirect('/login');

@@ -6,6 +6,15 @@
         <div class="mb-30">
             <a href="{{ url('/') }}"><h3 class="text-center txt-dark mb-10">Log in to Project Name</h3></a>
             <h6 class="text-center nonecase-font txt-grey">Enter your details below</h6>
+            
+            @if (Session::has('success'))
+            <div class="alert alert-success alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <i class="zmdi zmdi-check pr-15 pull-left"></i><p class="pull-left"><strong>Yay!</strong> {{Session::get('success')}}</p> 
+                <div class="clearfix"></div>
+            </div>
+            @endif
+            
             @if(Session::has('error'))
             <!-- error notice -->
             <br />

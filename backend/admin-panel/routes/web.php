@@ -35,4 +35,6 @@ Route::get('/delete-user/{id}', 'User@delete');
 
 // profile
 Route::get('/profile', 'Profile@index');
+Route::post('/personal-update', 'Profile@personal_update');
+Route::post('/password-update', 'Profile@password_update');
 

@@ -129,11 +129,9 @@
             <!-- Main Content -->
             <div class="page-wrapper">
                 <div class="container-fluid">
-                    
                     <!-- content -->
                     @yield('admin-content')
                     <!-- /content -->
-                    
                     <!-- Footer -->
                     <footer class="footer container-fluid pl-30 pr-30">
                         <div class="row">

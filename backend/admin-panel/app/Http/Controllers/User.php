@@ -51,7 +51,7 @@ class User extends Controller {
             
             'name' => $request->input('name'),
             'email' => $request->input('email'),
-            'password' => sha1(md5($request->input('email').$request->input('password'))),
+            'password' => sha1(md5($request->input('password'))),
             'level' => $request->input('level'),
             'admin' => $request->input('admin')
                 
@@ -128,7 +128,7 @@ class User extends Controller {
             
                 'name' => $request->input('name'),
                 'email' => $request->input('email'),
-                'password' => sha1(md5($request->input('email') . $request->input('password'))),
+                'password' => sha1(md5($request->input('password'))),
                 'level' => $request->input('level'),
                 'admin' => $request->input('admin')
                 
@@ -151,9 +151,7 @@ class User extends Controller {
             
         }
         
-        
-        
-    }
+   }
     
     // status ------------------------------------------------------------------
     public function status($id, $status) {

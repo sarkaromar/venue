@@ -37,7 +37,7 @@ class Login extends Controller {
         
         // get post data
         $email = $request->input('email');
-        $password = sha1(md5($request->input('email') . $request->input('password')));
+        $password = sha1(md5($request->input('password')));
         
         // get user from db
         $r = (new Common)->get_user('back_user', $email, $password);

@@ -23,11 +23,11 @@ class Dashboard extends Controller {
       
     }
     
-    public function logout(Request $request) {
+    public function logout() {
         
         (new Authon)->check();
         
-        $request->session()->flush();
+        session::flush();
         return redirect('/login');
         
     }

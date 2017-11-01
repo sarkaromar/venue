@@ -18,8 +18,25 @@
 
 <!-- Row -->
 <div class="row">
+    
     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+        
+        @if (Session::has('error'))
+        <div class="alert alert-danger alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+            <i class="zmdi zmdi-block pr-15 pull-left"></i><p class="pull-left"><strong>Opps!</strong> {{Session::get('error')}}</p>
+            <div class="clearfix"></div>
+        </div>
+        @endif
 
+        @if (Session::has('success'))
+        <div class="alert alert-success alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+            <i class="zmdi zmdi-check pr-15 pull-left"></i><p class="pull-left"><strong>Yay!</strong> {{Session::get('success')}}</p> 
+            <div class="clearfix"></div>
+        </div>
+        @endif
+        
         <div class="panel panel-danger contact-card card-view">
             <div class="panel-heading">
                 <div class="pull-left">
@@ -47,7 +64,7 @@
                         <i class="zmdi zmdi-edit txt-light"></i>
                     </a>
                     <a class="pull-left inline-block mr-15" data-toggle="modal" href="#password">
-                        <i class="zmdi zmdi-delete txt-light"></i>
+                        <i class="fa fa-key fa-lg txt-light"></i>
                     </a>
                 </div>
                 <div class="clearfix"></div>
@@ -82,13 +99,11 @@
                 </div>
             </div>
         </div>
-        
-        
         <!-- personal modal-->
         <div id="personal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    {!! Form::open(['url' => 'add_user']) !!}
+                    {!! Form::open(['url' => 'personal-update']) !!}
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                         <h5 class="modal-title">Update Personal Information</h5>
@@ -96,15 +111,15 @@
                     <div class="modal-body">
                         <div class="form-group">
                             <label class="control-label mb-10">Username:</label>
-                            <input type="text" class="form-control" name="name" placeholder="username" required>
+                            <input type="text" class="form-control" name="name" value="{{$info[0]->name}}" placeholder="username" required>
                         </div>
                         <div class="form-group">
                             <label class="control-label mb-10">Email:</label>
-                            <input type="email" class="form-control" name="email" placeholder="example@gmail.com" required>
+                            <input type="email" class="form-control" name="email" value="{{$info[0]->email}}" placeholder="example@gmail.com" required>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <input type="hidden" name="admin" value="{{session::get('id')}}" required/>
+                        <input type="hidden" name="old_email" value="{{$info[0]->email}}" required/>
                         <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i> Close</button>
                         <button type="submit" class="btn btn-success"><i class="fa fa-floppy-o" aria-hidden="true"></i> Update</button>
                     </div>
@@ -112,12 +127,11 @@
                 </div>
             </div>
         </div>
-        
         <!-- password modal-->
         <div id="password" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    {!! Form::open(['url' => 'add_user']) !!}
+                    {!! Form::open(['url' => 'password-update']) !!}
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                         <h5 class="modal-title">Update Password</h5>
@@ -138,7 +152,6 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <input type="hidden" name="admin" value="{{session::get('id')}}" required/>
                         <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i> Close</button>
                         <button type="submit" class="btn btn-success"><i class="fa fa-floppy-o" aria-hidden="true"></i> Update</button>
                     </div>

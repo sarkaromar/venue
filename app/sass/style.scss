@@ -42,7 +42,7 @@ $desktop-width: 1024px;
     position: absolute;
     left: 0;
     right: 0;
-    background: rgba(229, 57, 53, 0.05);
+    background: rgba(229, 57, 53, 0.01);
 }
 .logo{
     a{
@@ -62,12 +62,9 @@ $desktop-width: 1024px;
         margin: 0;
         font-size: 35px;
         font-weight: 900;
-        text-shadow: 1px 1px 1px #333;
-        color: #ffffff;
+        color: #e53935;
         text-transform: uppercase;
-        text-shadow: 1px 1px 1px #333333;
         &:hover{
-            text-shadow: 1px 1px 1px #cccccc;
         }
         @include mobile {
             text-align: center !important;
@@ -77,6 +74,7 @@ $desktop-width: 1024px;
     }
 }
 .top-nav{
+    float: right;
     ul{
         margin: 0;
         padding: 0;
@@ -91,7 +89,7 @@ $desktop-width: 1024px;
         list-style: none;
         padding: 0;
         margin: 0;
-        float: right;
+        float: left;
         @include mobile {
             text-align: center !important;
             float: none !important;
@@ -103,14 +101,14 @@ $desktop-width: 1024px;
         display: inline-block;
         padding: 20px 10px;
         text-align: center;
-        color: #ffffff;
-        text-shadow: 1px 1px 1px #333333;
+        color: #e53935;
+        font-weight: 900;
         font-size:12px; 
         text-transform: uppercase;
         &:hover{
             text-decoration: none;
             color: #e53935;
-            text-shadow: 1px 1px 1px #cccccc;
+           
         }
     }
 }
@@ -122,22 +120,67 @@ header{
         h2{
             color: #ffffff;
             text-shadow: 1px 1px 2px #000000;
+            text-transform: uppercase;
         }
+    }
+}
+.blog-list{
+    background: #f6f6f6;
+    padding: 10px;
+    margin-bottom: 15px;
+    img{
+        width: 100%;
+    }
+    h3, p{
+        margin: 0px;
+        padding: 0px;
+    }
+}
+.blog-right{
+    background: #f6f6f6;
+    padding: 10px;
+    margin-bottom: 15px;
+    img{
+        width: 100%;
+    }
+    .recent-blog{
+        border-bottom: 1px solid #dfdfdf;
+        margin-bottom: 10px;
+        &:last-child{
+            border-bottom: 0px solid #dfdfdf;
+            margin-bottom: 0px;
+        }
+        img{
+            float: left;
+            width: 70px;
+            margin-right: 10px;
+        }
+        h5{
+            margin: 0px;
+            padding: 0px;
+        }
+        a{
+            color: #333333;
+        }
+    }
+}
+.blog-details{
+    img{
+        width: 100%;
     }
 }
 .slider{
     background: url('../images/banner.jpg') no-repeat center;
     background-size: cover;
-    height: 768px;
+    height: 100vh;
 
 }
 .search-sec{
     position: relative;
     text-align: center;
-    top: 250px;
-    text-shadow: 1px 1px 1px #333333;
+    top: 40%;
     @include mobile {
-        top: 200px;
+        top: 220px;
     }
     h2{
         color: #ffffff;
@@ -151,7 +194,7 @@ header{
     .search-i{
         border: 1px solid #e53935;
         border-radius: 0px;
-        background: rgba(255, 255, 255, 0.75);
+        background: rgba(255, 255, 255, 0.25);
         &:focus{
             border: 1px solid #e53935;
         }
@@ -159,9 +202,10 @@ header{
     .search-b{
         background: #e53935;
         color: #ffffff;
-        font-weight: bold;
-        font-size: 22px;
-        border-radius: 0px;
+        font-size: 20px;
+        font-weight: 100;
+        border-radius: 0;
+        padding: 10px 30px;
         span{
             @include mobile {
                 display: none;
@@ -187,8 +231,7 @@ header{
     }
 }
 .top-sec-sub{
-    background: #e53935;
-
+    // background: #e53935;
 }
 .filters{
     background: #f6f6f6;
@@ -201,8 +244,28 @@ header{
         font-weight: bold
     }
     h3{
-        font-size: 18px;
+        font-size: 20px;
         text-transform: uppercase;
+    }
+    ul{
+        margin: 0px;
+        padding: 0px;
+        li{
+            list-style: none;
+            padding: 0px;
+            margin: 0px;
+            margin-bottom: 5px;
+        }
+        a{
+            text-decoration: none;
+            color: #222222;
+            display: block;
+            padding: 5px 15px;
+            background: #fff;
+            &:hover{
+                background: #dddddd;
+            }
+        }
     }
     
     .form-control {
@@ -537,10 +600,11 @@ header{
     margin: 50px 0;
 }
 .venue-panel{
-    margin: 50px 0;
+    background: #e53935;
+    padding: 50px 0;
     .user-sec{
-        box-shadow: 1px 1px 3px #cccccc;
         text-align: center;
+        color: #dddddd;
         h3{
             font-size: 22px;
             font-weight: bold;
@@ -549,7 +613,6 @@ header{
             font-size: 20px;
         }
         .avater{
-            padding: 15px;
             img{
                 border-radius: 100%;
                 border: 1px solid #cccccc;
@@ -563,21 +626,37 @@ header{
             margin: 0px;
             padding: 0;
             list-style: none;
-            border-bottom: 1px solid #cccccc;
+            border-bottom: 1px solid #ff4c47;
             &:last-child{
                 border-bottom: 0px;
             }
         }
         a{
             display: block;
-            padding: 10px 0;
+            padding: 6px 0;
             text-decoration: none;
-            color: #222222;
+            color: #dddddd;
+            text-transform: uppercase;
         }
     }
     .user-body-sec{
+        background: #ffffff;
+        padding: 15px;
+        min-height: -webkit-fill-available;
+    }
+    .user-menu{
+        .nav{
+            .nav-item{
+                width: 100%;
+                a.active{
+                    font-weight: bold;
+                }
+            }
+        }
     }
 }
+
+
 .venue-photos{
     img{
         width: 265px;

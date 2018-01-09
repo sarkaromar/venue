@@ -1,0 +1,13 @@
+{
+    "data":[
+        {
+            "title": "All Day Event",
+            "start": "2017-11-26"
+        },
+        {
+            "title": "Long Event",
+            "start": "2017-11-27",
+            "end": "2017-11-30"
+        }
+    ]
+}
